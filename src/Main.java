@@ -3,6 +3,10 @@ import trees.BinarySearchTree;
 
 public class Main {
     public static void main(String[] args) {
+       System.out.println("Hello!");
+    }
+
+    public static void createBinarySearchTree() {
        BinarySearchTree tree = new BinarySearchTree();
        tree.insert(15);
        tree.insert(170);
