@@ -4,20 +4,22 @@ import trees.bst.BinarySearchTree;
 public class Main {
     public static void main(String[] args) {
        System.out.println("Hello!");
-
+       createBinarySearchTree();
        createAvlTree();
     }
 
     public static void createBinarySearchTree() {
-       BinarySearchTree tree = new BinarySearchTree();
-       tree.insert(15);
-       tree.insert(170);
-       tree.insert(9);
-       tree.insert(4);
-       tree.insert(20);
-       tree.insert(1);
-       tree.insert(6);
-       System.out.println(tree.listTree());
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(15);
+        tree.insert(170);
+        tree.insert(9);
+        tree.insert(4);
+        tree.insert(20);
+        tree.insert(1);
+        tree.insert(6);
+        System.out.println(tree.listTree());
+        System.out.println(tree.lookup(7));
+        System.out.println(tree.lookup(9));
     }
 
     public static void createAvlTree() {

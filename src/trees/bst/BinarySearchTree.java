@@ -42,6 +42,24 @@ public class BinarySearchTree {
         }
     }
 
+    public boolean lookup(int value) {
+        if (this.root == null) {
+            return false;
+        }
+        TreeNode currentNode = this.root;
+        while (currentNode != null) {
+            if (value < currentNode.val) {
+                currentNode = currentNode.left;
+            } else if (value > currentNode.val){
+                currentNode = currentNode.right;
+            } else {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public List<Integer> listTree() {
         InorderTraversal traversal = new InorderTraversal();
         return traversal.inorderTraversal(this.root);
