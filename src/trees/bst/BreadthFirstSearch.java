@@ -1,4 +1,6 @@
-package trees;
+package trees.bst;
+
+import models.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

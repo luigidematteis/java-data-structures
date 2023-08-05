@@ -1,4 +1,4 @@
-package funny;
+package ex;
 
 import java.util.HashMap;
 import java.util.Map;
