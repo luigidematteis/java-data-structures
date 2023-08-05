@@ -39,7 +39,7 @@ public class AvlTree {
         int balanceFactor = balanceFactor(node);
 
         if (balanceFactor < -1) {
-            if (balanceFactor(node.getRightChild()) <= 0) {
+            if (balanceFactor(node.getLeftChild()) <= 0) {
                 node = rotateRight(node);
             } else {
                 node.setLeftChild(rotateLeft(node.getLeftChild()));
