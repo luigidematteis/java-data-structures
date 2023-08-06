@@ -1,4 +1,4 @@
-package trees.bst;
+package trees.traversal;
 
 import models.TreeNode;
 

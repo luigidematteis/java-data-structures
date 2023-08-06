@@ -2,10 +2,12 @@ import arrays.GroupAnagrams;
 import arrays.LongestSubstring;
 import trees.avl.AvlTree;
 import trees.bst.BinarySearchTree;
+import trees.traversal.BreadthFirstSearch;
 
 public class Main {
     public static void main(String[] args) {
        System.out.println("Hello!");
+       runDemoWithBinarySearchTree();
     }
 
     public static void runDemoWithBinarySearchTree() {
@@ -20,6 +22,9 @@ public class Main {
         System.out.println(tree.listTree());
         System.out.println(tree.lookup(7));
         System.out.println(tree.lookup(9));
+
+        BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
+        System.out.println(breadthFirstSearch.breadthFirstSearch(tree));
     }
 
     public static void runDemoWithLongestSubString() {

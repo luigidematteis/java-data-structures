@@ -1,6 +1,7 @@
 package trees.bst;
 
 import models.TreeNode;
+import trees.traversal.InorderTraversal;
 
 import java.util.List;
 
@@ -63,5 +64,9 @@ public class BinarySearchTree {
     public List<Integer> listTree() {
         InorderTraversal traversal = new InorderTraversal();
         return traversal.inorderTraversal(this.root);
+    }
+
+    public TreeNode getRootNode() {
+        return this.root;
     }
 }
