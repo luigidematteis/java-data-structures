@@ -1,14 +1,13 @@
+import arrays.GroupAnagrams;
 import trees.avl.AvlTree;
 import trees.bst.BinarySearchTree;
 
 public class Main {
     public static void main(String[] args) {
        System.out.println("Hello!");
-       createBinarySearchTree();
-       createAvlTree();
     }
 
-    public static void createBinarySearchTree() {
+    public static void runDemoWithBinarySearchTree() {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(15);
         tree.insert(170);
@@ -22,7 +21,7 @@ public class Main {
         System.out.println(tree.lookup(9));
     }
 
-    public static void createAvlTree() {
+    public static void runDemoWithAvlTree() {
         AvlTree avlTree = new AvlTree();
         avlTree.insert(15);
         avlTree.insert(170);
@@ -32,5 +31,11 @@ public class Main {
         avlTree.insert(1);
         avlTree.insert(6);
         System.out.println(avlTree.printAvlTree());
+    }
+
+    public static void runDemoWithGroupAnagrams() {
+        GroupAnagrams groupAnagrams = new GroupAnagrams();
+        String[] strings = {"eat","tea","tan","ate","nat","bat"};
+        groupAnagrams.groupAnagrams(strings);
     }
 }
