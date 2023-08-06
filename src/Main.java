@@ -1,4 +1,5 @@
 import arrays.GroupAnagrams;
+import arrays.LongestSubstring;
 import trees.avl.AvlTree;
 import trees.bst.BinarySearchTree;
 
@@ -19,6 +20,11 @@ public class Main {
         System.out.println(tree.listTree());
         System.out.println(tree.lookup(7));
         System.out.println(tree.lookup(9));
+    }
+
+    public static void runDemoWithLongestSubString() {
+        LongestSubstring longestSubstring = new LongestSubstring();
+        longestSubstring.lengthOfLongestSubstring("umvejcuuk");
     }
 
     public static void runDemoWithAvlTree() {
