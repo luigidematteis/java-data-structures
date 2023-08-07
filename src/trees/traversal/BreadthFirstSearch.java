@@ -29,4 +29,36 @@ public class BreadthFirstSearch {
         return list;
     }
 
+    public boolean isValidBST(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        if (root.left != null) {
+            int leftMax = nodeMax(root.left);
+            if (leftMax >= root.val) return false;
+        }
+
+        if (root.right != null) {
+            int rightMin = nodeMin(root.right);
+            if (rightMin <= root.val) return false;
+        }
+
+        return isValidBST(root.left) && isValidBST(root.right);
+    }
+
+    private int nodeMin(TreeNode root) {
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root.val;
+    }
+
+    private int nodeMax(TreeNode root) {
+        while (root.right != null) {
+            root = root.right;
+        }
+        return root.val;
+    }
+
 }
