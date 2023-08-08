@@ -1,5 +1,6 @@
 import arrays.GroupAnagrams;
 import arrays.LongestSubstring;
+import challenges.RotatedSortedArray;
 import trees.avl.AvlTree;
 import trees.bst.BinarySearchTree;
 import trees.traversal.BreadthFirstSearch;
@@ -7,7 +8,6 @@ import trees.traversal.BreadthFirstSearch;
 public class Main {
     public static void main(String[] args) {
        System.out.println("Hello!");
-       runDemoWithBinarySearchTree();
     }
 
     public static void runDemoWithBinarySearchTree() {
@@ -48,5 +48,11 @@ public class Main {
         GroupAnagrams groupAnagrams = new GroupAnagrams();
         String[] strings = {"eat","tea","tan","ate","nat","bat"};
         groupAnagrams.groupAnagrams(strings);
+    }
+
+    public static void runDemoWithRotatedSortedArray() {
+        RotatedSortedArray rotatedSortedArray = new RotatedSortedArray();
+        int[] nums = {4,5,6,7,0,1,2,3};
+        rotatedSortedArray.search(nums, 4);
     }
 }
