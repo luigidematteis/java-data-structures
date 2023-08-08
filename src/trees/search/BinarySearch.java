@@ -1,2 +1,4 @@
-package trees.search;public class BinarySearch {
+package trees.search;
+
+public class BinarySearch {
 }
