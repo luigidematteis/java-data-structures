@@ -22,7 +22,7 @@ public class AddTwoNumbers {
     public ListNode addTwoNumbersLessThanBigIntegerMaxValue(ListNode l1, ListNode l2) {
 
         // Declare a list that will contain the two numbers
-        List<BigInteger> numbers = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
         // Declare a list for looping through the list of nodes
         List<ListNode> lists = List.of(l1, l2);
 
@@ -42,15 +42,18 @@ public class AddTwoNumbers {
                 stringNumber.append(numbersBox.pop().val);
             }
 
+            //TODO: Add calculation digit by digit
+
             // Convert the string into a real integer
-            BigInteger number = BigInteger.valueOf(Long.parseLong(String.valueOf(stringNumber)));
+            int number = Integer.parseInt(String.valueOf(stringNumber));
 
             // Add the number to a list
             numbers.add(number);
         });
 
+
         // Calculate the sum of the two integers
-        BigInteger result = numbers.stream().reduce(BigInteger.valueOf(0), BigInteger::add);
+        Integer result = numbers.stream().reduce(0, Integer::sum);
 
         // Convert the result into a char array
         char[] resultChars = String.valueOf(result).toCharArray();
